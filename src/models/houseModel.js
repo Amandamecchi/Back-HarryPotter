@@ -30,7 +30,7 @@ const updateHouse = async (id, name, founder) => {
     const result = await pool.query(
         "UPDATE houses SET name = $1, founder = $2 WHERE id = $3 RETURNING *",
         [name, founder, id]
-    );
+    ); 
     return result.rows[0]
 };
 

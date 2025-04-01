@@ -8,8 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//tirarr o wizard ou do server ou do routes
-app.use("/api", wizardRoutes);
+app.use("/api/wizards", wizardRoutes);
 app.use("/api/houses", houseRoutes);
 
 const PORT = process.env.PORT || 3000;

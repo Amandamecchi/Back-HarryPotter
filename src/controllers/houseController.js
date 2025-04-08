@@ -53,4 +53,4 @@ const updateHouse = async (req, res) => {
     }
 };
 
-module.exports = { getAllHouses, getHouse,  createHouse, deleteHouse, updateHouse };
+module.exports = { getAllHouses, getHouse, createHouse, deleteHouse, updateHouse };

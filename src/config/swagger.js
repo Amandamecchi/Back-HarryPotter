@@ -10,9 +10,26 @@ const options = {
       version: '1.0.0',
       description: 'Documentação da API para gerenciar bruxos e casas de Hogwarts',
     },
+    components: {
+      securitySchemes: {
+        BearerAuth: {
+          type: 'apiKey',
+          in: 'header', 
+          name: 'x-api-key',
+          description: 'Insira a senha da API',
+        },
+      },
+    },
+    security: [
+      {
+        BearerAuth: [],
+      },
+    ],
   },
-  apis: ['./src/routes/*.js'], // <- Caminho das suas rotas
-};
+  apis: ['./src/routes/*.js'], // Caminho onde estão as rotas
+  };
+
+
 
 const swaggerSpec = swaggerJsdoc(options);
 
